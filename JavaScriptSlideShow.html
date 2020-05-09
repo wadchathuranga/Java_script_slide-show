@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>Javascript SlideShow</title>
+
+		<script type="text/javascript">
+            var image1=new Image()
+            image1.src="img/green.jpg"             
+
+            var image2=new Image()
+            image2.src="img/purpal.jpg"          
+
+            var image3=new Image()
+            image3.src="img/yellow.jpg"         
+
+            var image4=new Image()
+            image4.src="img/red.jpg"       
+
+            var image5=new Image()
+            image5.src="img/blue.jpg"       
+		</script>
+
+</head>
+<body>
+
+	<div align="center">
+		<!-- script here -->
+		<img src="img/green.jpg"  name="slideshow" alt="imageslideshow">
+	    <script type="text/javascript"> 
+		    var numberImage=1
+		    function myslide(){
+		    document.images.slideshow.src=eval("image"+numberImage+".src")
+		    if(numberImage<5) 
+		    numberImage = numberImage + 1
+		    else
+		    numberImage=1
+		    setTimeout("myslide()",1000)			/* Note: Change the 1000, if you want to speed which slides move on  */
+		    }
+		    myslide()
+	    </script>
+		<!-- /.script here -->
+	</div>
+
+
+
+</body>
+</html>
